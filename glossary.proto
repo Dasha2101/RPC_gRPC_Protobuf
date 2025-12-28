@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package glossary;
+
+// Сообщение для одного термина
+message Term {
+  string term = 1;
+  string definition = 2;
+  repeated string sources = 3;
+}
+
+// Запрос на получение одного термина
+message GetTermRequest {
+  string term = 1;
+}
+
+// Ответ на запрос одного термина
+message GetTermResponse {
+  Term term = 1;
+}
+
+// Запрос на получение всех терминов
+message ListTermsRequest {}
+
+// Ответ на запрос всех терминов
+message ListTermsResponse {
+  repeated Term terms = 1;
+}
+
+// Сервис Glossary
+service GlossaryService {
+  rpc GetTerm(GetTermRequest) returns (GetTermResponse);
+  rpc ListTerms(ListTermsRequest) returns (ListTermsResponse);
+}

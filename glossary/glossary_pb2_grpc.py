@@ -3,7 +3,7 @@
 import grpc
 import warnings
 
-import glossary_pb2 as glossary__pb2
+from . import glossary_pb2 as glossary__pb2
 
 GRPC_GENERATED_VERSION = '1.76.0'
 GRPC_VERSION = grpc.__version__
@@ -26,7 +26,8 @@ if _version_not_supported:
 
 
 class GlossaryServiceStub(object):
-    """Missing associated documentation comment in .proto file."""
+    """Сервис Glossary
+    """
 
     def __init__(self, channel):
         """Constructor.
@@ -37,28 +38,27 @@ class GlossaryServiceStub(object):
         self.GetTerm = channel.unary_unary(
                 '/glossary.GlossaryService/GetTerm',
                 request_serializer=glossary__pb2.GetTermRequest.SerializeToString,
-                response_deserializer=glossary__pb2.TermResponse.FromString,
+                response_deserializer=glossary__pb2.GetTermResponse.FromString,
                 _registered_method=True)
         self.ListTerms = channel.unary_unary(
                 '/glossary.GlossaryService/ListTerms',
                 request_serializer=glossary__pb2.ListTermsRequest.SerializeToString,
-                response_deserializer=glossary__pb2.TermsResponse.FromString,
+                response_deserializer=glossary__pb2.ListTermsResponse.FromString,
                 _registered_method=True)
 
 
 class GlossaryServiceServicer(object):
-    """Missing associated documentation comment in .proto file."""
+    """Сервис Glossary
+    """
 
     def GetTerm(self, request, context):
-        """Получить термин по названию
-        """
+        """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def ListTerms(self, request, context):
-        """Получить список всех терминов
-        """
+        """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
@@ -69,12 +69,12 @@ def add_GlossaryServiceServicer_to_server(servicer, server):
             'GetTerm': grpc.unary_unary_rpc_method_handler(
                     servicer.GetTerm,
                     request_deserializer=glossary__pb2.GetTermRequest.FromString,
-                    response_serializer=glossary__pb2.TermResponse.SerializeToString,
+                    response_serializer=glossary__pb2.GetTermResponse.SerializeToString,
             ),
             'ListTerms': grpc.unary_unary_rpc_method_handler(
                     servicer.ListTerms,
                     request_deserializer=glossary__pb2.ListTermsRequest.FromString,
-                    response_serializer=glossary__pb2.TermsResponse.SerializeToString,
+                    response_serializer=glossary__pb2.ListTermsResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -85,7 +85,8 @@ def add_GlossaryServiceServicer_to_server(servicer, server):
 
  # This class is part of an EXPERIMENTAL API.
 class GlossaryService(object):
-    """Missing associated documentation comment in .proto file."""
+    """Сервис Glossary
+    """
 
     @staticmethod
     def GetTerm(request,
@@ -103,7 +104,7 @@ class GlossaryService(object):
             target,
             '/glossary.GlossaryService/GetTerm',
             glossary__pb2.GetTermRequest.SerializeToString,
-            glossary__pb2.TermResponse.FromString,
+            glossary__pb2.GetTermResponse.FromString,
             options,
             channel_credentials,
             insecure,
@@ -130,7 +131,7 @@ class GlossaryService(object):
             target,
             '/glossary.GlossaryService/ListTerms',
             glossary__pb2.ListTermsRequest.SerializeToString,
-            glossary__pb2.TermsResponse.FromString,
+            glossary__pb2.ListTermsResponse.FromString,
             options,
             channel_credentials,
             insecure,

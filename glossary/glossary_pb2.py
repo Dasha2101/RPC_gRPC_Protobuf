@@ -24,23 +24,23 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0eglossary.proto\x12\x08glossary\"\x1e\n\x0eGetTermRequest\x12\x0c\n\x04term\x18\x01 \x01(\t\"\x12\n\x10ListTermsRequest\"9\n\x04Term\x12\x0c\n\x04term\x18\x01 \x01(\t\x12\x12\n\ndefinition\x18\x02 \x01(\t\x12\x0f\n\x07sources\x18\x03 \x03(\t\",\n\x0cTermResponse\x12\x1c\n\x04term\x18\x01 \x01(\x0b\x32\x0e.glossary.Term\".\n\rTermsResponse\x12\x1d\n\x05terms\x18\x01 \x03(\x0b\x32\x0e.glossary.Term2\x90\x01\n\x0fGlossaryService\x12;\n\x07GetTerm\x12\x18.glossary.GetTermRequest\x1a\x16.glossary.TermResponse\x12@\n\tListTerms\x12\x1a.glossary.ListTermsRequest\x1a\x17.glossary.TermsResponseb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0eglossary.proto\x12\x08glossary\"9\n\x04Term\x12\x0c\n\x04term\x18\x01 \x01(\t\x12\x12\n\ndefinition\x18\x02 \x01(\t\x12\x0f\n\x07sources\x18\x03 \x03(\t\"\x1e\n\x0eGetTermRequest\x12\x0c\n\x04term\x18\x01 \x01(\t\"/\n\x0fGetTermResponse\x12\x1c\n\x04term\x18\x01 \x01(\x0b\x32\x0e.glossary.Term\"\x12\n\x10ListTermsRequest\"2\n\x11ListTermsResponse\x12\x1d\n\x05terms\x18\x01 \x03(\x0b\x32\x0e.glossary.Term2\x97\x01\n\x0fGlossaryService\x12>\n\x07GetTerm\x12\x18.glossary.GetTermRequest\x1a\x19.glossary.GetTermResponse\x12\x44\n\tListTerms\x12\x1a.glossary.ListTermsRequest\x1a\x1b.glossary.ListTermsResponseb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'glossary_pb2', _globals)
 if not _descriptor._USE_C_DESCRIPTORS:
   DESCRIPTOR._loaded_options = None
-  _globals['_GETTERMREQUEST']._serialized_start=28
-  _globals['_GETTERMREQUEST']._serialized_end=58
-  _globals['_LISTTERMSREQUEST']._serialized_start=60
-  _globals['_LISTTERMSREQUEST']._serialized_end=78
-  _globals['_TERM']._serialized_start=80
-  _globals['_TERM']._serialized_end=137
-  _globals['_TERMRESPONSE']._serialized_start=139
-  _globals['_TERMRESPONSE']._serialized_end=183
-  _globals['_TERMSRESPONSE']._serialized_start=185
-  _globals['_TERMSRESPONSE']._serialized_end=231
-  _globals['_GLOSSARYSERVICE']._serialized_start=234
-  _globals['_GLOSSARYSERVICE']._serialized_end=378
+  _globals['_TERM']._serialized_start=28
+  _globals['_TERM']._serialized_end=85
+  _globals['_GETTERMREQUEST']._serialized_start=87
+  _globals['_GETTERMREQUEST']._serialized_end=117
+  _globals['_GETTERMRESPONSE']._serialized_start=119
+  _globals['_GETTERMRESPONSE']._serialized_end=166
+  _globals['_LISTTERMSREQUEST']._serialized_start=168
+  _globals['_LISTTERMSREQUEST']._serialized_end=186
+  _globals['_LISTTERMSRESPONSE']._serialized_start=188
+  _globals['_LISTTERMSRESPONSE']._serialized_end=238
+  _globals['_GLOSSARYSERVICE']._serialized_start=241
+  _globals['_GLOSSARYSERVICE']._serialized_end=392
 # @@protoc_insertion_point(module_scope)
