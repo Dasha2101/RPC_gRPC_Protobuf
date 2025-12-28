@@ -1,9 +1,29 @@
-# gRPC Glossary Service
+# Лабораторная работа №4. RPC. gRPC. Protobuf.
 
-Учебный проект: глоссарий терминов ВКР с использованием gRPC, Protocol Buffers и Docker.
+### 1. Загружаем и запускаем контейнер на публичном сервере
 
-## Стек
-- Python
-- gRPC / protobuf
-- Flask
-- Docker, Docker Compose
+![](images/cmd.png)
+
+### 2. Подключаемся к API на публичном сервере
+
+![](images/web.png)
+
+### 3. Демонстрация получения данных из базы
+
+![](images/web-get.png)
+
+### 4. Демонстрация добавления нового термина
+
+![](images/web-post.png)
+
+### 5. Демонстрация получения термина по ключу
+
+![](images/web-get-key.png)
+
+### 6. Демонстрация изменения термина
+
+![](images/web-put.png)
+
+### 7. Демонстрация удаления термина
+
+![](images/web-delete.png)

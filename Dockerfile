@@ -1,13 +1,11 @@
-FROM python:3.11-slim
+FROM python:3.12-slim
 
 WORKDIR /app
+COPY . .
 
-COPY requirements.txt .
-
+RUN pip install --no-cache-dir --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY glossary ./glossary
+EXPOSE 80 50051
 
-EXPOSE 50053
-
-CMD ["python", "-m", "glossary.glossary_server"]
+CMD ["bash", "-c", "python glossary/server.py & sleep 3 && uvicorn main:app --host 0.0.0.0 --port 80"]
